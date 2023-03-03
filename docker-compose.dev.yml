@@ -1,0 +1,15 @@
+version: '3'
+services:
+  app-node:
+    volumes:
+      - ./:/app
+      - /app/node_modules
+    environment:
+      - NODE_ENV=development
+      - MONGO_USER=mubbaseer
+      - MONGO_PASSWORD=mypassword
+      
+  mongo:
+    environment:
+      - MONGO_INITDB_ROOT_USERNAME=mubbaseer
+      - MONGO_INITDB_ROOT_PASSWORD=mypassword
