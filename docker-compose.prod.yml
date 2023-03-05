@@ -4,10 +4,10 @@ services:
     ports:
       - "80:80"
   app-node:
-  build:
-    context: .
-    args:
-      NODE_ENV: production
+    build:
+      context: .
+      args:
+        NODE_ENV: production
     command: node index.js
     environment:
       - NODE_ENV=production
