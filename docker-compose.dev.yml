@@ -1,5 +1,8 @@
 version: '3'
 services:
+  nginx:
+    ports:
+      - "3000:80"
   app-node:
     volumes:
       - ./:/app
@@ -8,6 +11,7 @@ services:
       - NODE_ENV=development
       - MONGO_USER=mubbaseer
       - MONGO_PASSWORD=mypassword
+      - SESSION_SECRET=secret
       
   mongo:
     environment:

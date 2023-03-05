@@ -1,5 +1,8 @@
 version: '3'
 services:
+  nginx:
+    ports:
+      - "80:80"
   app-node:
     command: node index.js
     environment:
