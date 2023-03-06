@@ -35,8 +35,8 @@ let redisStore = new RedisStore({
 })
 
 app.get("/api/v1", (req,res) => {
-    res.send(`<h2>inside compose saying exposed port is ${process.env.PORT} not changing</h2>`)
-    console.log("yeah it ran and working")
+    res.send(`<h2>inside compose saying exposed port is ${process.env.PORT} not changing!!!!</h2>`)
+    // console.log("yeah it ran and working")
 })
 
 const mongoURL = `mongodb://${MONGO_USER}:${MONGO_PASSWORD}@${MONGO_IP}:${MONGO_PORT}/?authSource=admin`
